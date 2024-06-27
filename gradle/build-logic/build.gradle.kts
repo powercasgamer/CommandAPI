@@ -10,6 +10,15 @@ repositories {
 
 dependencies {
 	compileOnly(files(libs::class.java.protectionDomain.codeSource.location))
+	implementation(libs.indra.common)
+	implementation(libs.indra.git)
+	implementation(libs.indra.spotless)
+	implementation(libs.shadow)
+	implementation(libs.kotlin.gradle)
+	implementation(libs.kotlin.std)
+	implementation(libs.idea.gradle)
+	implementation(libs.run.task)
+//	implementation(libs.spotless)
 }
 
 java {

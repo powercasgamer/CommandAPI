@@ -1,5 +1,12 @@
 pluginManagement {
-	includeBuild("gradle/build-logic")
+	repositories {
+		mavenCentral()
+		gradlePluginPortal()
+		maven("https://repo.stellardrift.ca/repository/snapshots/")
+		maven("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+		maven("https://repo.mizule.dev/testing") // remove
+		maven("https://repo.jpenilla.xyz/snapshots")
+	}
 }
 
 plugins {
@@ -19,5 +26,5 @@ sequenceOf(
 	"codecov",
 ).forEach {
 	include("commandapi-$it")
-	project(":commandapi-$it").projectDir = file(it)
+//	project(":commandapi-$it").projectDir = file(it)
 }
