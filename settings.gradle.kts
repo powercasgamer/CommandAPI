@@ -1,3 +1,7 @@
+pluginManagement {
+	includeBuild("gradle/build-logic")
+}
+
 plugins {
 	id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
@@ -14,6 +18,6 @@ sequenceOf(
 	"preprocessor",
 	"codecov",
 ).forEach {
-	include("$commandapi-$it")
-	project(":$commandapi-$it").projectDir = file(it)
+	include("commandapi-$it")
+	project(":commandapi-$it").projectDir = file(it)
 }
